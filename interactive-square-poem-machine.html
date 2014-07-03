@@ -1,0 +1,102 @@
+<!-- Interactive Square Poem Generator by Lake http://www.languageisavirus.com/square-poetry/interactive-square-poem-machine.html -->
+
+<!doctype html><html><head><title>Interactive Square Poem Machine | Languageisavirus.com</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="square-poem-highlighter.js"></script>
+<script src="interactive-square-poem.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</head><body>
+<p><strong>Insert your words into the form and the Interactive Square Poem Machine will create a Lewis Carrol-style "Square Poem" - made up of 6 lines of 6 words each, that reads the same across or up and down.</strong></p>
+
+<div id="foo">
+<p><h2>Square Poem by Lewis Carrol</h2>
+<table width="500" border="0"><tbody><tr>
+<td align=center valign=middle><div class=box id="onea" onMouseover="highlightLineOne()" onMouseout="highlightNone()" style="cursor:crosshair;">I</div></td>
+<td align=center valign=middle><div class=box id="oneb" onMouseover="highlightLineTwo()" onMouseout="highlightNone()" style="cursor:crosshair;">often</div></td>
+<td align=center valign=middle><div class=box id="onec" onMouseover="highlightLineThree()" onMouseout="highlightNone()" style="cursor:crosshair;">wondered</div></td>
+<td align=center valign=middle><div class=box id="oned" onMouseover="highlightLineFour()" onMouseout="highlightNone()" style="cursor:crosshair;">when</div></td>
+<td align=center valign=middle><div class=box id="onee" onMouseover="highlightLineFive()" onMouseout="highlightNone()" style="cursor:crosshair;">I</div></td>
+<td align=center valign=middle><div class=box id="onef" onMouseover="highlightLineSix()" onMouseout="highlightNone()" style="cursor:crosshair;">cursed</div></td></tr><tr>
+<td align=center valign=middle><div class=box id="twoa" onMouseover="highlightLineTwo()" onMouseout="highlightNone()" style="cursor:crosshair;">often</div></td>
+<td align=center valign=middle><div class=box id="twob">feared</div></td>
+<td align=center valign=middle><div class=box id="twoc">where</div></td>
+<td align=center valign=middle><div class=box id="twod">I</div></td>
+<td align=center valign=middle><div class=box id="twoe">would</div></td>
+<td align=center valign=middle><div class=box id="twof">be</div></td></tr><tr>
+<td align=center valign=middle><div class=box id="threea" onMouseover="highlightLineThree()" onMouseout="highlightNone()" style="cursor:crosshair;">wondered</div></td>
+<td align=center valign=middle><div class=box id="threeb">where</div></td>
+<td align=center valign=middle><div class=box id="threec">she'd</div></td>
+<td align=center valign=middle><div class=box id="threed">yield</div></td>
+<td align=center valign=middle><div class=box id="threee">her</div></td>
+<td align=center valign=middle><div class=box id="threef">love</div></td></tr><tr>
+<td align=center valign=middle><div class=box id="foura" onMouseover="highlightLineFour()" onMouseout="highlightNone()" style="cursor:crosshair;">when</div></td>
+<td align=center valign=middle><div class=box id="fourb">I</div></td>
+<td align=center valign=middle><div class=box id="fourc">yield</div></td>
+<td align=center valign=middle><div class=box id="fourd">so</div></td>
+<td align=center valign=middle><div class=box id="foure">will</div></td>
+<td align=center valign=middle><div class=box id="fourf">she</div></td></tr><tr>
+<td align=center valign=middle><div class=box id="fivea" onMouseover="highlightLineFive()" onMouseout="highlightNone()" style="cursor:crosshair;">I</div></td>
+<td align=center valign=middle><div class=box id="fiveb">would</div></td>
+<td align=center valign=middle><div class=box id="fivec">her</div></td>
+<td align=center valign=middle><div class=box id="fived">will</div></td>
+<td align=center valign=middle><div class=box id="fivee">be</div></td>
+<td align=center valign=middle><div class=box id="fivef">pitied</div></td></tr><tr>
+<td align=center valign=middle><div class=box id="sixa" onMouseover="highlightLineSix()" onMouseout="highlightNone()" style="cursor:crosshair;">cursed</div></td>
+<td align=center valign=middle><div class=box id="sixb">be</div></td>
+<td align=center valign=middle><div class=box id="sixc">love</div></td>
+<td align=center valign=middle><div class=box id="sixd">she</div></td>
+<td align=center valign=middle><div class=box id="sixe">pitied</div></td>
+<td align=center valign=middle><div class=box id="sixf">me</div></td>
+</tr></table>
+</p>
+</div>
+<div id=poemform>
+<form name="mypoem">
+Noun:<br /><input type="text" name="one" value="I"><br />
+Adverb:<br /><input type="text" name="two" value="often"><br />
+Verb:<br /><input type="text" name="three" value="wondered"><br />
+Adverb:<br /><input type="text" name="four" value="when"><br />
+Noun:<br /><input type="text" name="five" value="I"><br />
+Verb:<br /><input type="text" name="six" value="cursed"><br />
+
+<!-- input type="hidden" name="two" value="often" -->
+Verb:<br /><input type="text" name="seven" value="feared"><br />
+Adverb:<br /><input type="text" name="eight" value="where"><br />
+Noun:<br /><input type="text" name="nine" value="I"><br />
+Adverb:<br /><input type="text" name="ten" value="would"><br />
+Verb:<br /><input type="text" name="eleven" value="be"><br />
+
+<!-- input type="hidden" name="three" value="wondered"-->
+<!-- input type="hidden" name="eight" value="where"-->
+Noun:<br /><input type="text" name="twelve" value="she'd"><br />
+Verb:<br /><input type="text" name="thirteen" value="yield"><br />
+Noun:<br /><input type="text" name="fourteen" value="her"><br />
+Noun:<br /><input type="text" name="fifteen" value="love"><br />
+
+<!-- input type="hidden" name="four" value="when"-->
+<!-- input type="hidden" name="nine" value="I"-->
+<!-- input type="hidden" name="thirteen" value="yield"-->
+Verb:<br /><input type="text" name="sixteen" value="so"><br />
+Noun:<br /><input type="text" name="seventeen" value="will"><br />
+Verb:<br /><input type="text" name="eighteen" value="she"><br />
+
+<!-- input type="hidden" name="five" value="I"-->
+<!-- input type="hidden" name="ten" value="would"-->
+<!-- input type="hidden" name="fourteen" value="her"-->
+<!-- input type="hidden" name="seventeen" value="will"-->
+Verb:<br /><input type="text" name="nineteen" value="be"><br />
+Verb:<br /><input type="text" name="twenty" value="pitied"><br />
+
+<!-- input type="hidden" name="six" value="cursed"-->
+<!-- input type="hidden" name="eleven" value="be"-->
+<!-- input type="hidden" name="fifteen" value="love"-->
+<!-- input type="hidden" name="eighteen" value="she"-->
+<!-- input type="hidden" name="twenty" value="pitied"-->
+Noun:<br /><input type="text" name="twentyone" value="me"><br />
+<input type="button" value="Generate Square Poem" onClick="make_poem()">
+</form>
+</div>
+
+<p><a href="http://www.languageisavirus.com/" target="_blank">brought to you by LanguageIsAVirus.com</a></p>
+</body></html>
